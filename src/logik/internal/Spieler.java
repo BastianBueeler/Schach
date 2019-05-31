@@ -1,4 +1,4 @@
-package logik;
+package logik.internal;
 
 public class Spieler {
 

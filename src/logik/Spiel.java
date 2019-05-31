@@ -1,5 +1,8 @@
 package logik;
 
+import logik.internal.Spieler;
+import logik.internal.SpielerFactory;
+
 public class Spiel{
 
     private Spieler spieler1;
