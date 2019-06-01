@@ -1,7 +1,7 @@
 package logik;
 
-import logik.internal.Spieler;
-import logik.internal.SpielerFactory;
+import logik.internal.player.Spieler;
+import logik.internal.player.SpielerFactory;
 
 public class Spiel{
 
