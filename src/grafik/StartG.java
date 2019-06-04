@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class StartGUI extends JFrame implements ActionListener {
+public class StartG extends JFrame implements ActionListener {
     private JButton btnNextSite;
     private JTextField txtPlayer1 = new JTextField("Spieler1");
     private JTextField txtPlayer2 = new JTextField("Spieler2");
@@ -15,21 +15,21 @@ public class StartGUI extends JFrame implements ActionListener {
     private Spiel game = new Spiel();
     private JPanel panel1;
 
-    public StartGUI() {
+    public StartG() {
 
-        setLayout(new BorderLayout(5, 5));
+        setLayout(new BorderLayout(5,5));
 
 
-        Panel1.setLayout(new BorderLayout(5, 5));
+        Panel1.setLayout(new BorderLayout(5,5));
         add(Panel1, BorderLayout.CENTER);
         Panel1.add(lblRequest);
 
-        Panel2.setLayout(new GridLayout(1, 2, 5, 5));
+        Panel2.setLayout(new GridLayout(1,2,5,5));
         Panel1.add(Panel2, BorderLayout.CENTER);
         Panel2.add(txtPlayer1);
         Panel2.add(txtPlayer2);
 
-        Panel3.setLayout(new BorderLayout(5, 5));
+        Panel3.setLayout(new BorderLayout(5,5));
         add(Panel3, BorderLayout.SOUTH);
         Panel3.add(btnNextSite);
 
