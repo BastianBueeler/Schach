@@ -12,13 +12,18 @@ public class TestSpiel {
         spiel.createSpieler("Spieler 1");
         spiel.createSpieler("Spieler 2");
         spiel.createSpielfiguren();
-
-        List<List<ISpielfigur>> spielfeld = spiel.getSpielfeld();
-        for (List<ISpielfigur> row: spielfeld) {
-            for (ISpielfigur cell: row) {
-                System.out.print(cell == null ? "<null>" : cell.getName());
-            }
-            System.out.println();
+        if(spiel.zugAusfuehren("a2-a3")){
+            List<List<ISpielfigur>> spielfeld = spiel.getSpielfeld();
+            List<ISpielfigur> t = spielfeld.get(0);
+            System.out.println(t.get(0).getName());
+            //for (List<ISpielfigur> row: spielfeld) {
+            //    for (ISpielfigur cell: row) {
+            //        System.out.print(cell == null ? "<null>" : cell.getName());
+            //    }
+            //    System.out.println();
+            //}
+        }else{
+            System.out.println("du hesch verkackt");
         }
     }
 
