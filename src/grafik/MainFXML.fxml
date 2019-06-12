@@ -122,304 +122,274 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="1" GridPane.rowIndex="7">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image></ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image></ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image></ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image></ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image></ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image></ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image></ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image></ImageView>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="a1" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="a2" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="a3" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="a4" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="a5" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="a6" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="a8" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="b1" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="2" GridPane.rowIndex="6">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="b2" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="b3" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="2" GridPane.rowIndex="4">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="b4" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="b5" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="b6" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="b7" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="2">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="b8" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="c8" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="c7" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="c6" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="6">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Pictures/grey.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fx:id="c5" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <children>
+                        <ImageView fx:id="c4" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <children>
+                        <ImageView fx:id="c3" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <children>
+                        <ImageView fx:id="c2" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                     <children>
+                        <ImageView fx:id="d1" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                     <children>
+                        <ImageView fx:id="d3" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <children>
+                        <ImageView fx:id="d4" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <children>
+                        <ImageView fx:id="d5" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <children>
+                        <ImageView fx:id="d6" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="d7" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="4">
+                     <children>
+                        <ImageView fx:id="d8" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5">
+                     <children>
+                        <ImageView fx:id="e8" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="e7" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <children>
+                        <ImageView fx:id="e6" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <children>
+                        <ImageView fx:id="e5" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <children>
+                        <ImageView fx:id="e4" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     <children>
+                        <ImageView fx:id="e3" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                     <children>
+                        <ImageView fx:id="e2" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                     <children>
+                        <ImageView fx:id="e1" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="7">
+                     <children>
+                        <ImageView fx:id="f1" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                     <children>
+                        <ImageView fx:id="f3" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                     <children>
+                        <ImageView fx:id="f2" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                     <children>
+                        <ImageView fx:id="f4" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <children>
+                        <ImageView fx:id="f5" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <children>
+                        <ImageView fx:id="f6" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="f7" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="6">
+                     <children>
+                        <ImageView fx:id="f8" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7">
+                     <children>
+                        <ImageView fx:id="g8" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="g7" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                     <children>
+                        <ImageView fx:id="g6" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                     <children>
+                        <ImageView fx:id="g5" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                     <children>
+                        <ImageView fx:id="g4" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                     <children>
+                        <ImageView fx:id="g3" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                     <children>
+                        <ImageView fx:id="g2" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                     <children>
+                        <ImageView fx:id="g1" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="8">
+                     <children>
+                        <ImageView fx:id="h8" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="g7" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                     <children>
+                        <ImageView fx:id="h6" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                     <children>
+                        <ImageView fx:id="h5" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                     <children>
+                        <ImageView fx:id="h4" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                     <children>
+                        <ImageView fx:id="h3" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="8" GridPane.rowIndex="6">
+                     <children>
+                        <ImageView fx:id="h2" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="7">
+                     <children>
+                        <ImageView fx:id="h1" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                     <children>
+                        <ImageView fx:id="d2" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                     <children>
+                        <ImageView fx:id="c1" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></StackPane>
                </children>
                <StackPane.margin>
                   <Insets top="10.0" />
                </StackPane.margin>
             </GridPane>
-            <Label prefHeight="113.0" prefWidth="306.0" />
+            <Label fx:id="giveInformations" prefHeight="141.0" prefWidth="308.0">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding></Label>
          </children>
       </StackPane>
    </center>
@@ -430,12 +400,12 @@
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="66.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="145.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="192.5" minHeight="10.0" prefHeight="75.5" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="190.5" minHeight="10.0" prefHeight="187.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField promptText="Bewegung Figur">
+            <TextField fx:id="lblMove" promptText="Bewegung Figur">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -446,17 +416,17 @@
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="66.0" text="Hilfe?!" GridPane.columnIndex="1">
+            <Button mnemonicParsing="false" onAction="#openHelp" prefHeight="30.0" prefWidth="66.0" text="Hilfe?!" GridPane.columnIndex="1">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="39.0" prefWidth="130.0" text="Zug ausführen" textFill="#901e1e" GridPane.rowIndex="1">
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#makeMove" prefHeight="39.0" prefWidth="130.0" text="Zug ausführen" textFill="#901e1e" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="50.0" top="-70.0" />
+                  <Insets left="50.0" top="-50.0" />
                </GridPane.margin>
                <padding>
                   <Insets right="-2.0" />
@@ -466,7 +436,7 @@
                <graphic>
                   <ImageView fitHeight="46.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../Pictures/white_flag.png" />
+                        <Image url="@../../../../../../IdeaProjects/Schach2/Pictures/white_flag.png" />
                      </image>
                   </ImageView>
                </graphic>

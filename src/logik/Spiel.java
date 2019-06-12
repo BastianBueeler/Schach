@@ -1,6 +1,7 @@
 package logik;
 
 import logik.internal.chessmen.ISpielfigur;
+import logik.internal.chessmen.Spielfigur;
 import logik.internal.chessmen.SpielfigurFactory;
 import logik.internal.chessmen.SpielfigurType;
 import logik.internal.player.Spieler;
@@ -13,7 +14,7 @@ public class Spiel{
 
     private Spieler spieler1;
     private Spieler spieler2;
-    private Spieler aktuellerSpieler;
+    private Spieler aktuellerSpieler = spieler1;
     private String[] bauerPositionenen1 = {"a2", "b2", "c2", "d2", "e2", "f2", "g2", "h2"};
     private String[] bauerPositionenen2 = {"a7", "b7", "c7", "d7", "e7", "f7", "g7", "h7"};
     private String[] springerPositionenen1 = {"b1", "g1"};
@@ -28,7 +29,6 @@ public class Spiel{
         SpielerFactory spielerFactory = SpielerFactory.getInstance();
         if(spieler1 == null){
             spieler1 = spielerFactory.createSpieler(name);
-            aktuellerSpieler = spieler1;
         }else{
             spieler2 = spielerFactory.createSpieler(name);
         }
@@ -74,128 +74,70 @@ public class Spiel{
         }
     }
 
-    public void figurenAufSpielfeldSetzen(){
-        spielfeld.clear();
+    public List<List<ISpielfigur>> figurenAufSpielfeldSetzen(){
         List<ISpielfigur> zeile;
         StringBuffer position = new StringBuffer();
         for(int i = 0; i < 8; i++){
             zeile = new ArrayList<>();
             for(int j = 0; j < 8; j++){
-                position.append((char) (j + 97));
+                position.append((char)j +97);
                 position.append((int)i + 1);
-                ISpielfigur testi = positionVonSpieler1Besetzt(position.toString());
-                if(testi == null){
-                    testi = positionVonSpieler2Besetzt(position.toString());
-                    zeile.add(testi);
-                }else {
-                    zeile.add(testi);
+                for(ISpielfigur figur1 : spieler1.getSpielfiguren()){
+                    if(figur1.iskorrekteFigur(position.toString())){
+                        zeile.add(figur1);
+                    }else{
+                        for(ISpielfigur figur2 : spieler2.getSpielfiguren()){
+                            if(figur2.iskorrekteFigur((position.toString()))){
+                                zeile.add(figur2);
+                            }else{
+                                zeile.add(null);
+                            }
+                        }
+                    }
                 }
-                position.delete(0, position.length());
             }
             spielfeld.add(zeile);
         }
-    }
-
-    public ISpielfigur positionVonSpieler1Besetzt(String position){
-        for(ISpielfigur figur : spieler1.getSpielfiguren()){
-            if(figur.iskorrekteFigur(position)){
-                return figur;
-            }
-        }
-        return null;
-    }
-
-    public ISpielfigur positionVonSpieler2Besetzt(String position){
-        for(ISpielfigur figur : spieler2.getSpielfiguren()){
-            if(figur.iskorrekteFigur(position)){
-                return figur;
-            }
-        }
-        return null;
+        return spielfeld;
     }
 
     public boolean zugAusfuehren(String zug){
         String figurPosition = zug.substring(0, 2);
         String spielzugTyp = zug.substring(2, 3);
         String zielPosition = zug.substring(3, 5);
+        Spieler gegner;
+        ISpielfigur figur = null;
 
         if(spielzugTyp.equals("x")){
             if(aktuellerSpieler == spieler1) {
-                if(positionVonSpieler2Besetzt(zielPosition) == null){
-                    return false;
-                }
+                gegner = spieler2;
             }else {
-                if(positionVonSpieler1Besetzt(zielPosition) == null){
-                    return false;
-                }
+                gegner = spieler1;
             }
 
-            for(ISpielfigur figur : aktuellerSpieler.getSpielfiguren()){
-                if(figur.iskorrekteFigur(figurPosition)){
-                    if(figur.spielzugUeberpruefen(zielPosition, spielzugTyp)){
-                        figurFressen(zielPosition);
-                        figur.zugAusfuehren(zielPosition);
-                        return true;
+            for(ISpielfigur figurGegner : gegner.getSpielfiguren()){
+                if(!figurGegner.iskorrekteFigur(zielPosition)){
+
+                }else {
+                    for(ISpielfigur ueberpruefendeFigur : aktuellerSpieler.getSpielfiguren()){
+                        if(ueberpruefendeFigur.iskorrekteFigur(figurPosition)){
+                            figur = ueberpruefendeFigur;
+                        }
                     }
+                    break;
                 }
             }
-            return false;
-
-        }else {
-            if(!(positionVonSpieler1Besetzt(zielPosition) == null )){
+            if(figur.spielzugUeberpruefen(zielPosition, spielzugTyp)){
+                figur.zugAusfuehren(zielPosition);
+            }else {
                 return false;
             }
-            if(!(positionVonSpieler2Besetzt(zielPosition) == null)){
-                return false;
-            }
-            for(ISpielfigur figur : aktuellerSpieler.getSpielfiguren()){
-                if(figur.iskorrekteFigur(figurPosition)){
-                    if(figur.spielzugUeberpruefen(zielPosition, spielzugTyp)){
-                        figur.zugAusfuehren(zielPosition);
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
-    }
 
-    public List<List<ISpielfigur>> getSpielfeld(){
-        figurenAufSpielfeldSetzen();
-        return spielfeld;
-    }
-
-    public boolean spielGewonnen(){
-        if(aktuellerSpieler == spieler1){
-            for(ISpielfigur figur : spieler2.getSpielfiguren()) {
-                if (figur.getName().equals("König")) {
-                    return false;
-                }
-            }
         }else {
-            for(ISpielfigur figur : spieler1.getSpielfiguren()){
-                if(figur.getName().equals("König")){
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
 
-    public void figurFressen(String position){
-        if(aktuellerSpieler == spieler1){
-            for(ISpielfigur figur : spieler2.getSpielfiguren()){
-                if(figur.iskorrekteFigur(position)){
-                    figur = null;
-                }
-            }
-        }else {
-            for(ISpielfigur figur : spieler1.getSpielfiguren()){
-                if(figur.iskorrekteFigur(position)){
-                    figur = null;
-                }
-            }
         }
+
+        return false;
     }
 
     public Spieler getAktuellerSpieler(){
@@ -208,5 +150,9 @@ public class Spiel{
 
     public Spieler getSpieler2(){
         return spieler2;
+    }
+
+    public List<List<ISpielfigur>> getSpielfeld(){
+        return spielfeld;
     }
 }

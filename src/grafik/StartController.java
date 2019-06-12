@@ -1,6 +1,7 @@
 package grafik;
 
 import java.io.IOException;
+import java.util.List;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,10 +12,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import logik.Spiel;
+import logik.internal.chessmen.ISpielfigur;
 
 public class StartController {
 
 	Spiel game = new Spiel();
+	MainController MC = new MainController();
 	
 	@FXML
 	private Button GO;
@@ -50,7 +53,10 @@ public class StartController {
 		game.createSpieler(Player1.getText());
 		game.createSpieler(Player2.getText());
 		game.createSpielfiguren();
-		
-	}
+
+		MC.createFXMLField();
+		MC.createField();
+		}
+
 	
 }
