@@ -306,9 +306,16 @@ public class MainController {
     public void makeMove(ActionEvent event) {
         game.zugAusfuehren(lblMove.getText());
         createField();
+       // game.spielGewonnen();
 
         game.spielerWechsel();
-
+        lblMove.setText(game.getAktuellerSpieler() + " ist dran!");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        lblMove.setText(null);
 
 
     }
