@@ -11,8 +11,6 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import logik.Spiel;
 import logik.internal.chessmen.ISpielfigur;
-
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -271,8 +269,8 @@ public class MainController {
             color = "black";
         }
         List<List<ISpielfigur>> spielfeld = game.getSpielfeld();
-        for(int i = 0; i < 8; i++){
-            for(int j = 0; j < 8; j++){
+        for(int i = 1; i < 8; i++){
+            for(int j = 1; j < 8; j++){
 
                 if(spielfeld.get(i).get(j) == null){
                     field.get(i).get(j).setImage(null);
@@ -305,6 +303,8 @@ public class MainController {
     @FXML
     public void makeMove(ActionEvent event) {
         game.zugAusfuehren(lblMove.getText());
+
+
         createField();
        // game.spielGewonnen();
 
