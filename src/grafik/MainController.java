@@ -273,8 +273,8 @@ public class MainController {
             color = "black";
         }
         List<List<ISpielfigur>> spielfeld = game.getSpielfeld();
-        for(int i = 1; i < 8; i++){
-            for(int j = 1; j < 8; j++){
+        for(int i = 0; i < 8; i++){
+            for(int j = 0; j < 8; j++){
 
                 if(spielfeld.get(i).get(j) == null){
                     field.get(i).get(j).setImage(null);
