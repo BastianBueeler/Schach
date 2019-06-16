@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -23,7 +24,16 @@ public class MainController {
     private Label lblMove;
 
     @FXML
-    private Label giveInformations;
+    private Label lblGiveInformations;
+
+    @FXML
+    private Button btnHelp;
+
+    @FXML
+    private Button btnMove;
+
+    @FXML
+    private Button btnGiveUp;
 
     @FXML
     private ImageView a1;
@@ -306,22 +316,116 @@ public class MainController {
 
     @FXML
     public void makeMove(ActionEvent event) {
-        game.zugAusfuehren(lblMove.getText());
+        if( game.zugAusfuehren(lblMove.getText()) == false){
+            lblGiveInformations.setText("Zug ungültig!");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            lblGiveInformations.setText(null);
+        } else {
+            createField();
+           if (game.spielGewonnen() == false) {
+               game.spielerWechsel();
+               lblGiveInformations.setText(game.getAktuellerSpieler() + " ist dran!");
+               try {
+                   Thread.sleep(5000);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+               lblGiveInformations.setText(null);
+           } else {
+               lblGiveInformations.setDisable(true);
+               btnGiveUp.setDisable(true);
+               btnHelp.setDisable(true);
+               btnMove.setDisable(true);
+               lblGiveInformations.setText(game.getAktuellerSpieler() + " hat gewonnen!");
+               try {
+                   Thread.sleep(20000);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
 
+               lblGiveInformations.setText("Spiel schlisst in: 5");
+               try {
+                   Thread.sleep(1000);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+               lblGiveInformations.setText(null);
 
-        createField();
-       // game.spielGewonnen();
-
-        game.spielerWechsel();
-        lblMove.setText(game.getAktuellerSpieler() + " ist dran!");
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+               lblGiveInformations.setText("Spiel wird geschlossen");
+               try {
+                   Thread.sleep(5000);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+               lblGiveInformations.setText(null);
+                System.exit(0);
+               //EXIT//
+           }
         }
-        lblMove.setText(null);
-
-
     }
 
-}
+        @FXML
+        public void giveUp (ActionEvent event) {
+             lblGiveInformations.setDisable(true);
+             btnGiveUp.setDisable(true);
+             btnHelp.setDisable(true);
+             btnMove.setDisable(true);
+           if (game.getAktuellerSpieler().equals(game.getSpieler1())){
+               lblGiveInformations.setText(game.getSpieler1() + " hat aufgegeben");
+               try {
+                   Thread.sleep(5000);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+               lblGiveInformations.setText(null);
+
+               lblGiveInformations.setText(game.getSpieler2() + " hat gewonnen!");
+                   try {
+                       Thread.sleep(10000);
+                   } catch (InterruptedException e) {
+                       e.printStackTrace();
+                   }
+               lblGiveInformations.setText(null);
+
+               lblGiveInformations.setText("Spiel wird geschlossen");
+               try {
+                   Thread.sleep(5000);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+               System.exit(0);
+               //EXIT//
+           } else {
+               lblGiveInformations.setText(game.getSpieler2() + " hat aufgegeben");
+               try {
+                   Thread.sleep(5000);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+               lblGiveInformations.setText(null);
+
+               lblGiveInformations.setText(game.getSpieler1() + " hat gewonnen!");
+               try {
+                   Thread.sleep(20000);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+               lblGiveInformations.setText(null);
+
+               lblGiveInformations.setText("Spiel wird geschlossen");
+               try {
+                   Thread.sleep(5000);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+               System.exit(0);
+               //EXIT//
+           }
+        }
+    }
+
+

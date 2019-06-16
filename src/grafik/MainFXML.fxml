@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grafik.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grafik.MainController">
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -383,7 +383,7 @@
                   <Insets top="10.0" />
                </StackPane.margin>
             </GridPane>
-            <Label fx:id="giveInformations" prefHeight="141.0" prefWidth="308.0">
+            <Label fx:id="lblGiveInformations" prefHeight="141.0" prefWidth="329.0">
                <font>
                   <Font name="System Bold" size="26.0" />
                </font>
@@ -416,12 +416,12 @@
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Button mnemonicParsing="false" onAction="#openHelp" prefHeight="30.0" prefWidth="66.0" text="Hilfe?!" GridPane.columnIndex="1">
+            <Button fx:id="btnHelp" mnemonicParsing="false" onAction="#openHelp" prefHeight="30.0" prefWidth="66.0" text="Hilfe?!" GridPane.columnIndex="1">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#makeMove" prefHeight="39.0" prefWidth="130.0" text="Zug ausführen" textFill="#901e1e" GridPane.rowIndex="1">
+            <Button fx:id="btnMove" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#makeMove" prefHeight="39.0" prefWidth="130.0" text="Zug ausführen" textFill="#901e1e" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
@@ -432,11 +432,11 @@
                   <Insets right="-2.0" />
                </padding>
             </Button>
-            <Button contentDisplay="TOP" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="82.0" text="Aufgeben" textFill="#8a0c0c" GridPane.rowIndex="2">
+            <Button fx:id="btngiveUp" contentDisplay="TOP" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#giveUp" prefHeight="70.0" prefWidth="82.0" text="Aufgeben" textFill="#8a0c0c" GridPane.rowIndex="2">
                <graphic>
                   <ImageView fitHeight="46.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../IdeaProjects/Schach2/Pictures/white_flag.png" />
+                        <Image url="@../../Pictures/white_flag.png" />
                      </image>
                   </ImageView>
                </graphic>

@@ -11,7 +11,7 @@ public class StartApplication extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		stage.getIcons().add(new Image("/grafik/logo.png"));
+		stage.getIcons().add(new Image("grafik/logo.png"));
 		stage.setTitle("Schachsoftware");
 
 		Parent root = FXMLLoader.load(getClass().getResource("StartFXML.fxml"));
