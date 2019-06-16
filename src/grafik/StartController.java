@@ -17,7 +17,7 @@ import logik.internal.chessmen.ISpielfigur;
 public class StartController {
 
 	Spiel game = new Spiel();
-	MainController MC = new MainController();
+	MainController MC = new MainController(game);
 	
 	@FXML
 	private Button GO;

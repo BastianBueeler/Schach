@@ -17,7 +17,7 @@ import java.util.List;
 
 public class MainController {
 
-    Spiel game = new Spiel();
+    Spiel game;
 
     @FXML
     private Label lblMove;
@@ -179,6 +179,10 @@ public class MainController {
     List<ImageView> row7 = new ArrayList<>();
     List<ImageView> row8 = new ArrayList<>();
 
+    public MainController(Spiel game){
+        this.game = game;
+    }
+
     public void createFXMLField(){
         row1.add(a1);
         row1.add(b1);
@@ -283,10 +287,10 @@ public class MainController {
                     field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/dame.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("könig")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/koenig.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/könig.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("läufer")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/laeufer.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/läufer.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("springer")){
                     field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/springer.jpg"));
