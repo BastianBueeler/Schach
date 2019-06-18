@@ -37,7 +37,7 @@ public class MainController {
     private Button btnGiveUp;
 
     @FXML
-    private ImageView a1 = new ImageView();
+    private ImageView a1;
     @FXML
     private ImageView b1;
     @FXML
@@ -275,8 +275,6 @@ public class MainController {
         row8.add(g8);
         row8.add(h8);
         field.add(row8);
-        System.out.println(lblMove);
-        System.out.println(a1);
     }
 
     public void createField() {

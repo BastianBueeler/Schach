@@ -15,5 +15,4 @@ public interface ISpielfigur {
     public void zugAusfuehren(String spielzug);
 
     public boolean spielzugUeberpruefen(String zielPosition, String spielzugType);
-
 }

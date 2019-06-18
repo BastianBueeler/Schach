@@ -41,7 +41,7 @@ public class StartController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		createGame();
 		
 		Scene scene = new Scene(root);
