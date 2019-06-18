@@ -1,5 +1,6 @@
 package grafik;
 
+import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -273,6 +274,8 @@ public class MainController {
         row8.add(g8);
         row8.add(h8);
         field.add(row8);
+        System.out.println(lblMove);
+        System.out.println(a1);
     }
 
     public void createField() {
@@ -291,22 +294,28 @@ public class MainController {
                     continue;
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("bauer")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/bauer.jpg"));
+                    field.get(i).get(j).setImage(new Image ("/Pictures/characters/" + color + "/bauer.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("dame")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/dame.jpg"));
+                    field.get(i).get(j).setImage(new Image ("/Pictures/characters/" + color + "/dame.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("könig")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/könig.jpg"));
+                    field.get(i).get(j).setImage(new Image ("/Pictures/characters/" + color + "/könig.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("läufer")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/läufer.jpg"));
+                    field.get(i).get(j).setImage(new Image ("/Pictures/characters/" + color + "/läufer.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("springer")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/springer.jpg"));
+                    field.get(i).get(j).setImage(new Image ("/Pictures/characters/" + color + "/springer.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("turm")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/turm.jpg"));
+                    System.out.println("/Pictures/characters/"+color+"/turm.jpg");
+                    //System.out.println("Empty: " + field.get(i).get(j).toString());
+                    //System.out.print(field.get(i).get(j));
+                    Image test = new Image ("file:Pictures/characters/" + color + "/turm.jpg");
+                    List<ImageView> imageViews = field.get(i);
+                    ImageView imageView = imageViews.get(j);
+                    imageView.setImage(new Image ("file:Pictures/characters/" + color + "/turm.jpg"));
                 }
             }
         }
@@ -385,7 +394,7 @@ public class MainController {
 
                lblGiveInformations.setText(game.getSpieler2() + " hat gewonnen!");
                    try {
-                       Thread.sleep(10000);
+                       Thread.sleep(20000);
                    } catch (InterruptedException e) {
                        e.printStackTrace();
                    }
@@ -426,6 +435,18 @@ public class MainController {
                //EXIT//
            }
         }
+
+    @FXML
+    public void openHelp (ActionEvent event) throws IOException {
+
+        FXMLLoader fxmlloader = new FXMLLoader (getClass().getResource("HelpFXML.fxml"));
+        Parent root1 = (Parent) fxmlloader.load();
+        Stage stage = new Stage();
+
+        stage.setTitle("HelpView");
+        stage.setScene (new Scene(root1));
+        stage.show();
+    }
     }
 
 

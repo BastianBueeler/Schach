@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grafik.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grafik.MainController">
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -148,7 +148,7 @@
                      </children></StackPane>
                   <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                        <ImageView fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="a7" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
                   <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
@@ -344,7 +344,7 @@
                      </children></StackPane>
                   <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
                      <children>
-                        <ImageView fx:id="g7" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="h7" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
                      </children></StackPane>
                   <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: darkgray;" GridPane.columnIndex="8" GridPane.rowIndex="2">
                      <children>
@@ -383,13 +383,16 @@
                   <Insets top="10.0" />
                </StackPane.margin>
             </GridPane>
-            <Label fx:id="lblGiveInformations" prefHeight="141.0" prefWidth="329.0">
+            <Label fx:id="lblGiveInformations" alignment="CENTER" prefHeight="141.0" prefWidth="344.0">
                <font>
-                  <Font name="System Bold" size="26.0" />
+                  <Font name="System Bold" size="22.0" />
                </font>
                <padding>
                   <Insets left="50.0" />
-               </padding></Label>
+               </padding>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin></Label>
          </children>
       </StackPane>
    </center>
