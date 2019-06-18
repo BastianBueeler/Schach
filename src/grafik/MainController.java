@@ -37,7 +37,7 @@ public class MainController {
     private Button btnGiveUp;
 
     @FXML
-    private ImageView a1;
+    private ImageView a1 = new ImageView();
     @FXML
     private ImageView b1;
     @FXML
@@ -189,6 +189,7 @@ public class MainController {
     List<ImageView> row6 = new ArrayList<>();
     List<ImageView> row7 = new ArrayList<>();
     List<ImageView> row8 = new ArrayList<>();
+    private ClassLoader getClass;
 
     public MainController(Spiel game){
         this.game = game;
@@ -309,13 +310,7 @@ public class MainController {
                     field.get(i).get(j).setImage(new Image ("/Pictures/characters/" + color + "/springer.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("turm")){
-                    System.out.println("/Pictures/characters/"+color+"/turm.jpg");
-                    //System.out.println("Empty: " + field.get(i).get(j).toString());
-                    //System.out.print(field.get(i).get(j));
-                    Image test = new Image ("file:Pictures/characters/" + color + "/turm.jpg");
-                    List<ImageView> imageViews = field.get(i);
-                    ImageView imageView = imageViews.get(j);
-                    imageView.setImage(new Image ("file:Pictures/characters/" + color + "/turm.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/turm.jpg"));
                 }
             }
         }
