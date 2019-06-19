@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -435,11 +435,11 @@
                   <Insets right="-2.0" />
                </padding>
             </Button>
-            <Button fx:id="btngiveUp" contentDisplay="TOP" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#giveUp" prefHeight="70.0" prefWidth="82.0" text="Aufgeben" textFill="#8a0c0c" GridPane.rowIndex="2">
+            <Button fx:id="btnGiveUp" contentDisplay="TOP" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#giveUp" prefHeight="70.0" prefWidth="82.0" text="Aufgeben" textFill="#8a0c0c" GridPane.rowIndex="2">
                <graphic>
                   <ImageView fitHeight="46.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../Pictures/white_flag.png" />
+                        <Image url="@../Pictures/white_flag.png" />
                      </image>
                   </ImageView>
                </graphic>

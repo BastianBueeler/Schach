@@ -91,91 +91,91 @@ public class MainController {
 
 
     @FXML
-    private ImageView a4 = new ImageView();
+    private ImageView a4;
     @FXML
-    private ImageView b4 = new ImageView();
+    private ImageView b4;
     @FXML
-    private ImageView c4 = new ImageView();
+    private ImageView c4;
     @FXML
-    private ImageView d4 = new ImageView();
+    private ImageView d4;
     @FXML
-    private ImageView e4 = new ImageView();
+    private ImageView e4;
     @FXML
-    private ImageView f4 = new ImageView();
+    private ImageView f4;
     @FXML
-    private ImageView g4 = new ImageView();
+    private ImageView g4;
     @FXML
-    private ImageView h4 = new ImageView();
+    private ImageView h4;
 
 
     @FXML
-    private ImageView a5 = new ImageView();
+    private ImageView a5;
     @FXML
-    private ImageView b5 = new ImageView();
+    private ImageView b5;
     @FXML
-    private ImageView c5 = new ImageView();
+    private ImageView c5;
     @FXML
-    private ImageView d5 = new ImageView();
+    private ImageView d5;
     @FXML
-    private ImageView e5 = new ImageView();
+    private ImageView e5;
     @FXML
-    private ImageView f5 = new ImageView();
+    private ImageView f5;
     @FXML
-    private ImageView g5 = new ImageView();
+    private ImageView g5;
     @FXML
-    private ImageView h5 = new ImageView();
+    private ImageView h5;
 
 
     @FXML
-    private ImageView a6 = new ImageView();
+    private ImageView a6;
     @FXML
-    private ImageView b6 = new ImageView();
+    private ImageView b6;
     @FXML
-    private ImageView c6 = new ImageView();
+    private ImageView c6;
     @FXML
-    private ImageView d6 = new ImageView();
+    private ImageView d6;
     @FXML
-    private ImageView e6 = new ImageView();
+    private ImageView e6;
     @FXML
-    private ImageView f6 = new ImageView();
+    private ImageView f6;
     @FXML
-    private ImageView g6 = new ImageView();
+    private ImageView g6;
     @FXML
-    private ImageView h6 = new ImageView();
+    private ImageView h6;
 
 
     @FXML
-    private ImageView a7 = new ImageView();
+    private ImageView a7;
     @FXML
-    private ImageView b7 = new ImageView();
+    private ImageView b7;
     @FXML
-    private ImageView c7 = new ImageView();
+    private ImageView c7;
     @FXML
-    private ImageView d7 = new ImageView();
+    private ImageView d7;
     @FXML
-    private ImageView e7 = new ImageView();
+    private ImageView e7;
     @FXML
-    private ImageView f7 = new ImageView();
+    private ImageView f7;
     @FXML
-    private ImageView g7 = new ImageView();
+    private ImageView g7;
     @FXML
-    private ImageView h7 = new ImageView();
+    private ImageView h7;
 
 
     @FXML
-    private ImageView a8 = new ImageView();
+    private ImageView a8;
     @FXML
-    private ImageView b8 = new ImageView();
+    private ImageView b8;
     @FXML
-    private ImageView c8 = new ImageView();
+    private ImageView c8;
     @FXML
-    private ImageView d8 = new ImageView();
+    private ImageView d8;
     @FXML
-    private ImageView e8 = new ImageView();
+    private ImageView e8;
     @FXML
-    private ImageView f8 = new ImageView();
+    private ImageView f8;
     @FXML
-    private ImageView g8 = new ImageView();
+    private ImageView g8;
 
     @FXML
     private ImageView h8 = new ImageView();
@@ -329,7 +329,6 @@ public class MainController {
                }
                lblGiveInformations.setText(null);
            } else {
-               lblGiveInformations.setDisable(true);
                btnGiveUp.setDisable(true);
                btnHelp.setDisable(true);
                btnMove.setDisable(true);
@@ -361,9 +360,13 @@ public class MainController {
         }
     }
 
+    public void setGame(Spiel game){
+        this.game = game;
+    }
+
+
         @FXML
         public void giveUp (ActionEvent event) {
-             lblGiveInformations.setDisable(true);
              btnGiveUp.setDisable(true);
              btnHelp.setDisable(true);
              btnMove.setDisable(true);
@@ -431,11 +434,6 @@ public class MainController {
         stage.setScene (new Scene(root1));
         stage.show();
     }
-
-    public void setGame(Spiel game){
-        this.game = game;
-    }
-
 }
 
 
