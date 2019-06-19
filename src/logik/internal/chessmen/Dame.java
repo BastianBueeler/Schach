@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Dame extends Spielfigur {
 
-    public Dame(String name, String momentanePosition) {
-        super(name, momentanePosition);
+    public Dame(String name, String momentanePosition, String farbe) {
+        super(name, momentanePosition, farbe);
     }
 
     @Override

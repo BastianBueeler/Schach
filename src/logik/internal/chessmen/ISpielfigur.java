@@ -15,4 +15,8 @@ public interface ISpielfigur {
     public void zugAusfuehren(String spielzug);
 
     public boolean spielzugUeberpruefen(String zielPosition, String spielzugType);
+
+    public String getFarbe();
+
+    public void setFarbe(String farbe);
 }

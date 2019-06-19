@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Turm extends Spielfigur {
 
-    public Turm(String name, String momentanePosition) {
-        super(name, momentanePosition);
+    public Turm(String name, String momentanePosition, String farbe) {
+        super(name, momentanePosition, farbe);
     }
 
     @Override

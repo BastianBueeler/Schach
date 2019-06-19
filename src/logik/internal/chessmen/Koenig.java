@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Koenig extends Spielfigur{
 
-    public Koenig(String name, String momentanePosition) {
-        super(name, momentanePosition);
+    public Koenig(String name, String momentanePosition, String farbe) {
+        super(name, momentanePosition, farbe);
     }
 
     @Override

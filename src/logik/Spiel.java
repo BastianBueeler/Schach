@@ -39,26 +39,26 @@ public class Spiel{
         List<ISpielfigur> spielfiguren1 = new ArrayList<>();
         List<ISpielfigur> spielfiguren2 = new ArrayList<>();
         for(int i = 0; i < 8; i++){
-            spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Bauer, "Bauer", bauerPositionenen1[i]));
-            spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Bauer, "Bauer", bauerPositionenen2[i]));
+            spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Bauer, "Bauer", bauerPositionenen1[i], "white"));
+            spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Bauer, "Bauer", bauerPositionenen2[i], "black"));
         }
         for(int i = 0; i < 2; i++){
-            spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Springer, "Springer", springerPositionenen1[i]));
-            spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Springer, "Springer", springerPositionenen2[i]));
+            spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Springer, "Springer", springerPositionenen1[i], "white"));
+            spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Springer, "Springer", springerPositionenen2[i], "black"));
         }
         for(int i = 0; i < 2; i++){
-            spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Laeufer, "Läufer", laeuferPositionenen1[i]));
-            spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Laeufer, "Läufer", laeuferPositionenen2[i]));
+            spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Laeufer, "Läufer", laeuferPositionenen1[i], "white"));
+            spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Laeufer, "Läufer", laeuferPositionenen2[i], "black"));
         }
         for(int i = 0; i < 2; i++){
-            spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Turm, "Turm", turmPositionenen1[i]));
-            spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Turm, "Turm", turmPositionenen2[i]));
+            spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Turm, "Turm", turmPositionenen1[i], "white"));
+            spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Turm, "Turm", turmPositionenen2[i], "black"));
         }
-        spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Koenig, "König", "e1"));
-        spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Koenig, "König", "e8"));
+        spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Koenig, "König", "e1", "white"));
+        spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Koenig, "König", "e8", "black"));
 
-        spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Dame, "Dame", "d1"));
-        spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Dame, "Dame", "d8"));
+        spielfiguren1.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Dame, "Dame", "d1", "white"));
+        spielfiguren2.add(spielfigurFactory.createSpielfiguren(SpielfigurType.Dame, "Dame", "d8", "black"));
 
         spieler1.setSpielfiguren(spielfiguren1);
         spieler2.setSpielfiguren(spielfiguren2);
@@ -75,14 +75,14 @@ public class Spiel{
     }
 
     public void figurenAufSpielfeldSetzen(){
-                    spielfeld.clear();
-                    List<ISpielfigur> zeile;
-                    StringBuffer position = new StringBuffer();
-                    for(int i = 0; i < 8; i++){
-                        zeile = new ArrayList<>();
-                        for(int j = 0; j < 8; j++){
-                            position.append((char) (j + 97));
-                            position.append((int)i + 1);
+        spielfeld.clear();
+        List<ISpielfigur> zeile;
+        StringBuffer position = new StringBuffer();
+        for(int i = 0; i < 8; i++){
+            zeile = new ArrayList<>();
+            for(int j = 0; j < 8; j++){
+                position.append((char) (j + 97));
+                position.append((int)i + 1);
                 ISpielfigur testi = positionVonSpieler1Besetzt(position.toString());
                 if(testi == null){
                     testi = positionVonSpieler2Besetzt(position.toString());

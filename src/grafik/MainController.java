@@ -1,13 +1,13 @@
 package grafik;
 
-import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
+import javafx.fxml.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -22,7 +22,7 @@ public class MainController {
     Spiel game;
 
     @FXML
-    private Label lblMove;
+    private TextField lblMove;
 
     @FXML
     private Label lblGiveInformations;
@@ -91,93 +91,94 @@ public class MainController {
 
 
     @FXML
-    private ImageView a4;
+    private ImageView a4 = new ImageView();
     @FXML
-    private ImageView b4;
+    private ImageView b4 = new ImageView();
     @FXML
-    private ImageView c4;
+    private ImageView c4 = new ImageView();
     @FXML
-    private ImageView d4;
+    private ImageView d4 = new ImageView();
     @FXML
-    private ImageView e4;
+    private ImageView e4 = new ImageView();
     @FXML
-    private ImageView f4;
+    private ImageView f4 = new ImageView();
     @FXML
-    private ImageView g4;
+    private ImageView g4 = new ImageView();
     @FXML
-    private ImageView h4;
+    private ImageView h4 = new ImageView();
 
 
     @FXML
-    private ImageView a5;
+    private ImageView a5 = new ImageView();
     @FXML
-    private ImageView b5;
+    private ImageView b5 = new ImageView();
     @FXML
-    private ImageView c5;
+    private ImageView c5 = new ImageView();
     @FXML
-    private ImageView d5;
+    private ImageView d5 = new ImageView();
     @FXML
-    private ImageView e5;
+    private ImageView e5 = new ImageView();
     @FXML
-    private ImageView f5;
+    private ImageView f5 = new ImageView();
     @FXML
-    private ImageView g5;
+    private ImageView g5 = new ImageView();
     @FXML
-    private ImageView h5;
+    private ImageView h5 = new ImageView();
 
 
     @FXML
-    private ImageView a6;
+    private ImageView a6 = new ImageView();
     @FXML
-    private ImageView b6;
+    private ImageView b6 = new ImageView();
     @FXML
-    private ImageView c6;
+    private ImageView c6 = new ImageView();
     @FXML
-    private ImageView d6;
+    private ImageView d6 = new ImageView();
     @FXML
-    private ImageView e6;
+    private ImageView e6 = new ImageView();
     @FXML
-    private ImageView f6;
+    private ImageView f6 = new ImageView();
     @FXML
-    private ImageView g6;
+    private ImageView g6 = new ImageView();
     @FXML
-    private ImageView h6;
+    private ImageView h6 = new ImageView();
 
 
     @FXML
-    private ImageView a7;
+    private ImageView a7 = new ImageView();
     @FXML
-    private ImageView b7;
+    private ImageView b7 = new ImageView();
     @FXML
-    private ImageView c7;
+    private ImageView c7 = new ImageView();
     @FXML
-    private ImageView d7;
+    private ImageView d7 = new ImageView();
     @FXML
-    private ImageView e7;
+    private ImageView e7 = new ImageView();
     @FXML
-    private ImageView f7;
+    private ImageView f7 = new ImageView();
     @FXML
-    private ImageView g7;
+    private ImageView g7 = new ImageView();
     @FXML
-    private ImageView h7;
+    private ImageView h7 = new ImageView();
 
 
     @FXML
-    private ImageView a8;
+    private ImageView a8 = new ImageView();
     @FXML
-    private ImageView b8;
+    private ImageView b8 = new ImageView();
     @FXML
-    private ImageView c8;
+    private ImageView c8 = new ImageView();
     @FXML
-    private ImageView d8;
+    private ImageView d8 = new ImageView();
     @FXML
-    private ImageView e8;
+    private ImageView e8 = new ImageView();
     @FXML
-    private ImageView f8;
+    private ImageView f8 = new ImageView();
     @FXML
-    private ImageView g8;
+    private ImageView g8 = new ImageView();
+
     @FXML
-    private ImageView h8;
+    private ImageView h8 = new ImageView();
 
     List<List<ImageView>> field = new ArrayList<>();
 
@@ -190,10 +191,6 @@ public class MainController {
     List<ImageView> row7 = new ArrayList<>();
     List<ImageView> row8 = new ArrayList<>();
     private ClassLoader getClass;
-
-    public MainController(Spiel game){
-        this.game = game;
-    }
 
     public void createFXMLField(){
         row1.add(a1);
@@ -278,12 +275,6 @@ public class MainController {
     }
 
     public void createField() {
-        String color;
-        if(game.getAktuellerSpieler() == game.getSpieler1()){
-            color = "white";
-        }else{
-            color = "black";
-        }
         List<List<ISpielfigur>> spielfeld = game.getSpielfeld();
         for(int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++){
@@ -293,22 +284,22 @@ public class MainController {
                     continue;
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("bauer")){
-                    field.get(i).get(j).setImage(new Image ("/Pictures/characters/" + color + "/bauer.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/bauer.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("dame")){
-                    field.get(i).get(j).setImage(new Image ("/Pictures/characters/" + color + "/dame.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/dame.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("könig")){
-                    field.get(i).get(j).setImage(new Image ("/Pictures/characters/" + color + "/könig.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/könig.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("läufer")){
-                    field.get(i).get(j).setImage(new Image ("/Pictures/characters/" + color + "/läufer.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/läufer.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("springer")){
-                    field.get(i).get(j).setImage(new Image ("/Pictures/characters/" + color + "/springer.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/springer.jpg"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("turm")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + color + "/turm.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/turm.jpg"));
                 }
             }
         }
@@ -440,6 +431,11 @@ public class MainController {
         stage.setScene (new Scene(root1));
         stage.show();
     }
+
+    public void setGame(Spiel game){
+        this.game = game;
     }
+
+}
 
 

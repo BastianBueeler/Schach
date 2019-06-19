@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Bauer extends Spielfigur {
 
-    public Bauer(String name, String startPosition) {
-        super(name, startPosition);
+    public Bauer(String name, String startPosition, String farbe) {
+        super(name, startPosition, farbe);
     }
 
 

@@ -4,10 +4,22 @@ public abstract class Spielfigur implements ISpielfigur{
 
     protected String name;
     protected String momentanePosition;
+    protected String farbe;
 
-    public Spielfigur(String name, String momentanePosition){
+    public Spielfigur(String name, String momentanePosition, String farbe){
         setName(name);
         setMomentanePosition(momentanePosition);
+        setFarbe(farbe);
+    }
+
+    @Override
+    public String getFarbe(){
+        return farbe;
+    }
+
+    @Override
+    public void setFarbe(String farbe) {
+        this.farbe = farbe;
     }
 
     @Override
