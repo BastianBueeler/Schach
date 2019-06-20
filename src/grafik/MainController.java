@@ -1,5 +1,6 @@
 package grafik;
 
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import logik.Spiel;
 import logik.internal.chessmen.ISpielfigur;
 import java.io.IOException;
@@ -180,6 +182,14 @@ public class MainController {
     @FXML
     private ImageView h8 = new ImageView();
 
+    PauseTransition pause5 = new PauseTransition(
+            Duration.seconds(5)
+    );
+
+    PauseTransition pause20 = new PauseTransition(
+            Duration.seconds(20)
+    );
+
     List<List<ImageView>> field = new ArrayList<>();
 
     List<ImageView> row1 = new ArrayList<>();
@@ -303,59 +313,44 @@ public class MainController {
                 }
             }
         }
+        lblGiveInformations.setText(game.getAktuellerSpieler().getName() + " ist dran!");
+        pause5.play();
+        pause5.setOnFinished(event1 -> {
+            lblGiveInformations.setText(null);
+        });
     }
 
-
-
     @FXML
-    public void makeMove(ActionEvent event) {
+    public void makeMove(ActionEvent event) throws InterruptedException {
         if( game.zugAusfuehren(lblMove.getText()) == false){
             lblGiveInformations.setText("Zug ungültig!");
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            lblGiveInformations.setText(null);
+            pause5.play();
+            pause5.setOnFinished(event1 -> {
+                lblGiveInformations.setText(null);
+                });
         } else {
             createField();
            if (game.spielGewonnen() == false) {
                game.spielerWechsel();
-               lblGiveInformations.setText(game.getAktuellerSpieler() + " ist dran!");
-               try {
-                   Thread.sleep(5000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               lblGiveInformations.setText(null);
+               lblGiveInformations.setText(game.getAktuellerSpieler().getName() + " ist dran!");
+               pause5.play();
+               pause5.setOnFinished(event1 -> {
+                   lblGiveInformations.setText(null);
+               });
            } else {
                btnGiveUp.setDisable(true);
                btnHelp.setDisable(true);
                btnMove.setDisable(true);
-               lblGiveInformations.setText(game.getAktuellerSpieler() + " hat gewonnen!");
-               try {
-                   Thread.sleep(20000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
+               lblGiveInformations.setText(game.getAktuellerSpieler().getName() + " hat gewonnen!");
+               pause20.play();
+               pause20.setOnFinished(event1 -> {
+                   lblGiveInformations.setText("Spiel wird geschlossen");
+                   pause5.play();
+                   pause5.setOnFinished(event2 -> {
+                       System.exit(0);
+                   });
 
-               lblGiveInformations.setText("Spiel schlisst in: 5");
-               try {
-                   Thread.sleep(1000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               lblGiveInformations.setText(null);
-
-               lblGiveInformations.setText("Spiel wird geschlossen");
-               try {
-                   Thread.sleep(5000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               lblGiveInformations.setText(null);
-                System.exit(0);
-               //EXIT//
+               });
            }
         }
     }
@@ -370,56 +365,36 @@ public class MainController {
              btnGiveUp.setDisable(true);
              btnHelp.setDisable(true);
              btnMove.setDisable(true);
-           if (game.getAktuellerSpieler().equals(game.getSpieler1())){
-               lblGiveInformations.setText(game.getSpieler1() + " hat aufgegeben");
-               try {
-                   Thread.sleep(5000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               lblGiveInformations.setText(null);
+           if (game.getAktuellerSpieler().getName().equals(game.getSpieler1())){
+               lblGiveInformations.setText(game.getSpieler1().getName() + " hat aufgegeben");
 
-               lblGiveInformations.setText(game.getSpieler2() + " hat gewonnen!");
-                   try {
-                       Thread.sleep(20000);
-                   } catch (InterruptedException e) {
-                       e.printStackTrace();
-                   }
-               lblGiveInformations.setText(null);
-
-               lblGiveInformations.setText("Spiel wird geschlossen");
-               try {
-                   Thread.sleep(5000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               System.exit(0);
-               //EXIT//
+               pause5.play();
+               pause5.setOnFinished(event1 -> {
+                   lblGiveInformations.setText(game.getSpieler2().getName() + " hat gewonnen!");
+                   pause20.play();
+                   pause20.setOnFinished(event2 -> {
+                       lblGiveInformations.setText("Spiel wird geschlossen");
+                       pause5.play();
+                       pause5.setOnFinished(event3 -> {
+                           System.exit(0);
+                       });
+                   });
+               });
            } else {
-               lblGiveInformations.setText(game.getSpieler2() + " hat aufgegeben");
-               try {
-                   Thread.sleep(5000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               lblGiveInformations.setText(null);
+               lblGiveInformations.setText(game.getSpieler2().getName() + " hat aufgegeben");
+               pause5.play();
+               pause5.setOnFinished(event1 -> {
+                   lblGiveInformations.setText(game.getSpieler1().getName() + " hat gewonnen!");
+                   pause20.play();
+                   pause20.setOnFinished(event2 -> {
+                       lblGiveInformations.setText("Spiel wird geschlossen");
+                       pause5.play();
+                       pause5.setOnFinished(event3 -> {
+                           System.exit(0);
+                       });
 
-               lblGiveInformations.setText(game.getSpieler1() + " hat gewonnen!");
-               try {
-                   Thread.sleep(20000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               lblGiveInformations.setText(null);
-
-               lblGiveInformations.setText("Spiel wird geschlossen");
-               try {
-                   Thread.sleep(5000);
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-               System.exit(0);
-               //EXIT//
+                   });
+               });
            }
         }
 
@@ -430,7 +405,8 @@ public class MainController {
         Parent root1 = (Parent) fxmlloader.load();
         Stage stage = new Stage();
 
-        stage.setTitle("HelpView");
+        stage.setTitle("Hilfe?!");
+        stage.getIcons().add(new Image("Pictures/questionmark.png"));
         stage.setScene (new Scene(root1));
         stage.show();
     }

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -383,16 +383,6 @@
                   <Insets top="10.0" />
                </StackPane.margin>
             </GridPane>
-            <Label fx:id="lblGiveInformations" alignment="CENTER" prefHeight="141.0" prefWidth="344.0">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
-               <StackPane.margin>
-                  <Insets />
-               </StackPane.margin></Label>
          </children>
       </StackPane>
    </center>
@@ -404,8 +394,9 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="145.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="192.5" minHeight="10.0" prefHeight="75.5" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="190.5" minHeight="10.0" prefHeight="187.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="192.5" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="190.5" minHeight="10.0" prefHeight="126.5" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="190.5" minHeight="10.0" prefHeight="125.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <TextField fx:id="lblMove" promptText="Bewegung Figur">
@@ -435,7 +426,7 @@
                   <Insets right="-2.0" />
                </padding>
             </Button>
-            <Button fx:id="btnGiveUp" contentDisplay="TOP" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#giveUp" prefHeight="70.0" prefWidth="82.0" text="Aufgeben" textFill="#8a0c0c" GridPane.rowIndex="2">
+            <Button fx:id="btnGiveUp" contentDisplay="TOP" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#giveUp" prefHeight="70.0" prefWidth="82.0" text="Aufgeben" textFill="#8a0c0c" GridPane.rowIndex="3">
                <graphic>
                   <ImageView fitHeight="46.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -449,6 +440,13 @@
                <GridPane.margin>
                   <Insets left="75.0" />
                </GridPane.margin></Button>
+            <Label fx:id="lblGiveInformations" contentDisplay="CENTER" prefHeight="116.0" prefWidth="143.0" text="aaa" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" right="-85.0" />
+               </padding></Label>
          </children>
       </GridPane>
    </right>
