@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <GridPane prefHeight="386.0" prefWidth="600.0" BorderPane.alignment="CENTER">
@@ -31,12 +30,12 @@
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="69.0" prefWidth="486.0" text="Schritt 2: Nun gibst du das Zielfeld mit einem - davor an." GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="69.0" prefWidth="505.0" text="Schritt 2: Nun gibst du das Zielfeld mit einem &quot;-&quot; davor an." GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label prefHeight="102.0" prefWidth="424.0" text="Beispiel: Startfeld a2 und Zielfeld a3 &gt;&gt;&gt; a2-a3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+            <Label prefHeight="102.0" prefWidth="424.0" text="Beispiel: Startfeld a2 und Zielfeld a3 -&gt; a2-a3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

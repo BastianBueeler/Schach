@@ -383,6 +383,13 @@
                   <Insets top="10.0" />
                </StackPane.margin>
             </GridPane>
+            <Label fx:id="lblGiveInformations" alignment="CENTER" contentDisplay="CENTER" prefHeight="116.0" prefWidth="396.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="40.0" />
+               </padding></Label>
          </children>
       </StackPane>
    </center>
@@ -393,10 +400,9 @@
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="66.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="145.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="192.5" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="190.5" minHeight="10.0" prefHeight="126.5" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="190.5" minHeight="10.0" prefHeight="125.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="167.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="192.5" minHeight="3.5" prefHeight="3.5" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="241.0" minHeight="10.0" prefHeight="237.5" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <TextField fx:id="lblMove" promptText="Bewegung Figur">
@@ -426,7 +432,7 @@
                   <Insets right="-2.0" />
                </padding>
             </Button>
-            <Button fx:id="btnGiveUp" contentDisplay="TOP" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#giveUp" prefHeight="70.0" prefWidth="82.0" text="Aufgeben" textFill="#8a0c0c" GridPane.rowIndex="3">
+            <Button fx:id="btnGiveUp" contentDisplay="TOP" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#giveUp" prefHeight="70.0" prefWidth="82.0" text="Aufgeben" textFill="#8a0c0c" GridPane.rowIndex="2">
                <graphic>
                   <ImageView fitHeight="46.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -440,13 +446,6 @@
                <GridPane.margin>
                   <Insets left="75.0" />
                </GridPane.margin></Button>
-            <Label fx:id="lblGiveInformations" contentDisplay="CENTER" prefHeight="116.0" prefWidth="143.0" text="aaa" GridPane.rowIndex="2">
-               <font>
-                  <Font name="System Bold Italic" size="20.0" />
-               </font>
-               <padding>
-                  <Insets left="50.0" right="-85.0" />
-               </padding></Label>
          </children>
       </GridPane>
    </right>
