@@ -9,6 +9,10 @@ import logik.internal.player.SpielerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Dario Grob
+ * @version 1.0
+ */
 public class Spiel{
 
     private Spieler spieler1;
@@ -24,6 +28,9 @@ public class Spiel{
     private String[] turmPositionenen2 = {"a8", "h8"};
     private List<List<ISpielfigur>> spielfeld = new ArrayList<>();
 
+    /**
+     * @param name - Wird zum Namen des Spielers, welcher erstellt werden soll
+     */
     public void createSpieler(String name){
         SpielerFactory spielerFactory = SpielerFactory.getInstance();
         if(spieler1 == null){
@@ -83,12 +90,12 @@ public class Spiel{
             for(int j = 0; j < 8; j++){
                 position.append((char) (j + 97));
                 position.append((int)i + 1);
-                ISpielfigur testi = positionVonSpieler1Besetzt(position.toString());
-                if(testi == null){
-                    testi = positionVonSpieler2Besetzt(position.toString());
-                    zeile.add(testi);
+                ISpielfigur figur = positionVonSpieler1Besetzt(position.toString());
+                if(figur == null){
+                    figur = positionVonSpieler2Besetzt(position.toString());
+                    zeile.add(figur);
                 }else {
-                    zeile.add(testi);
+                    zeile.add(figur);
                 }
                 position.delete(0, position.length());
             }
@@ -96,6 +103,10 @@ public class Spiel{
         }
     }
 
+    /**
+     * @param position - überprüft ob an dieser Position eine Figur des Spielers 1 ist
+     * @return ISpielfigur - gibt die Figur welcher an dieser Position ist zurück
+     */
     public ISpielfigur positionVonSpieler1Besetzt(String position){
         for(ISpielfigur figur : spieler1.getSpielfiguren()){
             if(figur.iskorrekteFigur(position)){
@@ -105,6 +116,10 @@ public class Spiel{
         return null;
     }
 
+    /**
+     * @param position - überprüft ob an dieser Position eine Figur des Spielers 2 ist
+     * @return ISpielfigur - gibt die Figur welcher an dieser Position ist zurück
+     */
     public ISpielfigur positionVonSpieler2Besetzt(String position){
         for(ISpielfigur figur : spieler2.getSpielfiguren()){
             if(figur.iskorrekteFigur(position)){
@@ -114,6 +129,10 @@ public class Spiel{
         return null;
     }
 
+    /**
+     * @param zug - Der Zug welcher der Spieler eingegeben hat und ausgeführt werden soll
+     * @return boolean - ob der Zug erfolgreich ausgeführt worden ist oder nicht
+     */
     public boolean zugAusfuehren(String zug){
         String figurPosition = zug.substring(0, 2);
         String spielzugTyp = zug.substring(2, 3);
@@ -132,7 +151,7 @@ public class Spiel{
 
             for(ISpielfigur figur : aktuellerSpieler.getSpielfiguren()){
                 if(figur.iskorrekteFigur(figurPosition)){
-                    if(figur.spielzugUeberpruefen(zielPosition, spielzugTyp)){
+                    if(figur.spielzugUeberpruefen(zielPosition, spielzugTyp, this)){
                         figurFressen(zielPosition);
                         figur.zugAusfuehren(zielPosition);
                         return true;
@@ -150,7 +169,7 @@ public class Spiel{
             }
             for(ISpielfigur figur : aktuellerSpieler.getSpielfiguren()){
                 if(figur.iskorrekteFigur(figurPosition)){
-                    if(figur.spielzugUeberpruefen(zielPosition, spielzugTyp)){
+                    if(figur.spielzugUeberpruefen(zielPosition, spielzugTyp, this)){
                         figur.zugAusfuehren(zielPosition);
                         return true;
                     }
@@ -160,11 +179,17 @@ public class Spiel{
         }
     }
 
+    /**
+     * @return List<List<ISpielfiguren>> - gibt das Spielfeld mit den Figuren zurück
+     */
     public List<List<ISpielfigur>> getSpielfeld(){
         figurenAufSpielfeldSetzen();
         return spielfeld;
     }
 
+    /**
+     * @return boolean - ob der Spieler gewonnen hat
+     */
     public boolean spielGewonnen(){
         if(aktuellerSpieler == spieler1){
             for(ISpielfigur figur : spieler2.getSpielfiguren()) {
@@ -182,31 +207,58 @@ public class Spiel{
         return true;
     }
 
+    /**
+     * @param position - Die Figur an dieser Position wird gelöscht/gefressen
+     */
     public void figurFressen(String position){
+        ISpielfigur zuLoeschendeFigur= null;
         if(aktuellerSpieler == spieler1){
             for(ISpielfigur figur : spieler2.getSpielfiguren()){
                 if(figur.iskorrekteFigur(position)){
-                    figur = null;
+                    zuLoeschendeFigur = figur;
                 }
             }
+            spieler2.figurFressen(zuLoeschendeFigur);
         }else {
             for(ISpielfigur figur : spieler1.getSpielfiguren()){
                 if(figur.iskorrekteFigur(position)){
-                    figur = null;
+                    zuLoeschendeFigur = figur;
                 }
             }
+            spieler1.figurFressen(zuLoeschendeFigur);
         }
     }
 
+    /**
+     * @return Spieler - gibt den aktuellen Spieler zurück
+     */
     public Spieler getAktuellerSpieler(){
         return aktuellerSpieler;
     }
 
+    /**
+     * @return Spieler - gibt Spieler 1 zurück
+     */
     public Spieler getSpieler1(){
         return spieler1;
     }
 
+    /**
+     * @return Spieler - gibt Spieler 2 zurück
+     */
     public Spieler getSpieler2(){
         return spieler2;
+    }
+
+    public boolean positionBesetzt(String position){
+        if(positionVonSpieler1Besetzt(position) != null){
+            return true;
+        }
+
+        if(positionVonSpieler2Besetzt(position) != null){
+            return true;
+        }
+
+        return false;
     }
 }
