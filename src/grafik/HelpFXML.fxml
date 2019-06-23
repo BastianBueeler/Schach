@@ -14,10 +14,12 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="171.0" minHeight="10.0" prefHeight="161.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="94.5" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="68.5" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="99.5" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="171.0" minHeight="10.0" prefHeight="149.5" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="94.5" minHeight="10.0" prefHeight="45.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="94.5" minHeight="10.0" prefHeight="37.5" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="94.5" minHeight="10.0" prefHeight="40.5" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="68.5" minHeight="10.0" prefHeight="50.5" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="99.5" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="600.0" text="Wie mache ich einen Zug?" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
@@ -25,19 +27,29 @@
                   <Font name="System Bold" size="48.0" />
                </font>
             </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="86.0" prefWidth="541.0" text="Schritt 2: Willst du eine gegnerische Figur &quot;fressen&quot;?  dann &quot;x&quot;" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="565.0" text="Schritt 2: Nun gibst du das Zielfeld mit einem &quot;x&quot;/&quot;-&quot; davor an." GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="91.0" prefWidth="493.0" text="Beispiel: Startfeld a2 und Zielfeld a3 -&gt; a2-a3 oder a2xa3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
             <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="86.0" prefWidth="541.0" text="Schritt 1: Gib das Feld der Figur an, welche du bewegen willst. " GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="69.0" prefWidth="505.0" text="Schritt 2: Nun gibst du das Zielfeld mit einem &quot;-&quot; davor an." GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="86.0" prefWidth="541.0" text="Schritt 3: Willst du mit deiner Figur auf ein freies Feld dann &quot;-&quot; " GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
-               </font>
-            </Label>
-            <Label prefHeight="102.0" prefWidth="424.0" text="Beispiel: Startfeld a2 und Zielfeld a3 -&gt; a2-a3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
          </children>

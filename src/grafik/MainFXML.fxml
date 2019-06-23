@@ -383,9 +383,9 @@
                   <Insets top="10.0" />
                </StackPane.margin>
             </GridPane>
-            <Label fx:id="lblGiveInformations" alignment="CENTER" contentDisplay="CENTER" prefHeight="116.0" prefWidth="396.0">
+            <Label fx:id="lblGiveInformations" alignment="CENTER" contentDisplay="CENTER" prefHeight="116.0" prefWidth="396.0" textFill="#0700ff">
                <font>
-                  <Font name="System Bold Italic" size="20.0" />
+                  <Font name="System Bold Italic" size="23.0" />
                </font>
                <padding>
                   <Insets left="40.0" />
@@ -405,7 +405,7 @@
           <RowConstraints maxHeight="241.0" minHeight="10.0" prefHeight="237.5" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField fx:id="lblMove" promptText="Bewegung Figur">
+            <TextField fx:id="txtMove" promptText="Bewegung Figur">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

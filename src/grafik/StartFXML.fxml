@@ -25,26 +25,43 @@
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="43.5" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="240.0" minHeight="10.0" prefHeight="232.5" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField fx:id="Player1" alignment="CENTER" promptText="Spieler 1" rotate="-3.0">
+            <TextField fx:id="Player1" alignment="CENTER" promptText="Spieler 1" rotate="-3.0" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="50.0" top="100.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="Player2" alignment="CENTER" promptText="Spieler 2" rotate="3.0" GridPane.columnIndex="2">
+            <TextField fx:id="Player2" alignment="CENTER" promptText="Spieler 2" rotate="3.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="50.0" top="100.0" />
                </GridPane.margin>
             </TextField>
-            <ImageView fitHeight="119.0" fitWidth="126.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+            <ImageView fitHeight="119.0" fitWidth="116.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <image>
-                  <Image url="@../../Pictures/vs.png" />
+                  <Image url="@../Pictures/vs.png" />
                </image>
                <GridPane.margin>
                   <Insets top="70.0" />
                </GridPane.margin>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" rotate="-3.0" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="75.0" top="305.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../Pictures/characters/white/bauer.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" rotate="3.0" GridPane.columnIndex="2" GridPane.halignment="LEFT">
+               <GridPane.margin>
+                  <Insets left="75.0" top="305.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../Pictures/characters/black/bauer.jpg" />
+               </image>
             </ImageView>
          </children>
       </GridPane>

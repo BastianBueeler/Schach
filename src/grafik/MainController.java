@@ -24,7 +24,7 @@ public class MainController {
     Spiel game;
 
     @FXML
-    private TextField lblMove;
+    private TextField txtMove;
 
     @FXML
     private Label lblGiveInformations;
@@ -322,7 +322,7 @@ public class MainController {
 
     @FXML
     public void makeMove(ActionEvent event) throws InterruptedException {
-        if( game.zugAusfuehren(lblMove.getText()) == false){
+        if( game.zugAusfuehren(txtMove.getText()) == false){
             lblGiveInformations.setText("Zug ungültig!");
             pause5.play();
             pause5.setOnFinished(event1 -> {
@@ -353,6 +353,7 @@ public class MainController {
                });
            }
         }
+        txtMove.setText("");
     }
 
     public void setGame(Spiel game){
