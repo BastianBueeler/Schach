@@ -32,7 +32,7 @@
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="565.0" text="Schritt 2: Nun gibst du das Zielfeld mit einem &quot;x&quot;/&quot;-&quot; davor an." GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="565.0" text="Schritt 4: Nun gibst du das Zielfeld mit einem &quot;x&quot;/&quot;-&quot; davor an." GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
