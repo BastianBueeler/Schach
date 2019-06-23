@@ -1,80 +1,115 @@
 package logik.internal.chessmen;
 
+import logik.Spiel;
+
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Dario Grob
+ * @version 1.0
+ */
 public class Laeufer extends Spielfigur{
 
+    /**
+     * @param name - Der Name der Spielfigur
+     * @param momentanePosition - Die momentane Position, welche die Figur hat
+     * @param farbe - Die Farbe, welche die Figur hat (white, black)
+     */
     public Laeufer(String name, String momentanePosition, String farbe) {
         super(name, momentanePosition, farbe);
     }
 
+    /**
+     * @param zielPosition - Position wo die Figur nach dem Zug soll sein
+     * @param spielzugType - ob bei dem Zug eine Figur gefressen wird oder nicht
+     * @param spiel
+     * @return boolean ob Zug erlaubt ist oder nicht
+     */
     @Override
-    public boolean spielzugUeberpruefen(String zielPosition, String spielzugType) {
+    public boolean spielzugUeberpruefen(String zielPosition, String spielzugType, Spiel spiel) {
         char momentanePositionX = momentanePosition.substring(0,1).charAt(0);
         int momentanePositionY = Integer.parseInt(momentanePosition.substring(1));
         List<StringBuffer> erlaubteZuege = new ArrayList<>();
-        StringBuffer erlaubterZug = new StringBuffer();
-        boolean weiter = true;
         int counter = 1;
 
-        while(weiter){
-            if(momentanePositionX == (char) 104 || momentanePositionY == 8){
-                weiter = false;
-                continue;
+        while(true){
+            if(momentanePositionX + counter > (char) 104 || momentanePositionY + counter > 8){
+                break;
             }
-            erlaubterZug.append(momentanePositionX + counter);
+            StringBuffer erlaubterZug = new StringBuffer();
+            erlaubterZug.append((char) (momentanePositionX + counter));
             erlaubterZug.append(momentanePositionY + counter);
-            erlaubteZuege.add(erlaubterZug);
-            erlaubterZug.delete(0, erlaubterZug.length());
-            if(momentanePositionX + counter == (char) 104 || momentanePositionY + counter == 8){
-                weiter = false;
+            if(spiel.positionBesetzt(erlaubterZug.toString())){
+                if(spielzugType == "-"){
+                    break;
+                }else{
+                    erlaubteZuege.add(erlaubterZug);
+                    break;
+                }
             }
+            erlaubteZuege.add(erlaubterZug);
+            counter++;
         }
 
-        weiter = true;
-        while(weiter){
-            if(momentanePositionX == (char) 97 || momentanePositionY == 1){
-                weiter = false;
-                continue;
+        counter = 1;
+        while(true){
+            if(momentanePositionX - counter < (char) 97 || momentanePositionY - counter < 1){
+                break;
             }
-            erlaubterZug.append(momentanePositionX - counter);
+            StringBuffer erlaubterZug = new StringBuffer();
+            erlaubterZug.append((char) (momentanePositionX - counter));
             erlaubterZug.append(momentanePositionY - counter);
-            erlaubteZuege.add(erlaubterZug);
-            erlaubterZug.delete(0, erlaubterZug.length());
-            if(momentanePositionX - counter == (char) 97 || momentanePositionY - counter == 1){
-                weiter = false;
+            if(spiel.positionBesetzt(erlaubterZug.toString())){
+                if(spielzugType == "-"){
+                    break;
+                }else{
+                    erlaubteZuege.add(erlaubterZug);
+                    break;
+                }
             }
+            erlaubteZuege.add(erlaubterZug);
+            counter++;
         }
 
-        weiter = true;
-        while(weiter){
-            if(momentanePositionX == (char) 97 || momentanePositionY == 8){
-                weiter = false;
-                continue;
+        counter = 1;
+        while(true){
+            if(momentanePositionX - counter < (char) 97 || momentanePositionY + counter > 8){
+                break;
             }
-            erlaubterZug.append(momentanePositionX - counter);
+            StringBuffer erlaubterZug = new StringBuffer();
+            erlaubterZug.append((char) (momentanePositionX - counter));
             erlaubterZug.append(momentanePositionY + counter);
-            erlaubteZuege.add(erlaubterZug);
-            erlaubterZug.delete(0, erlaubterZug.length());
-            if(momentanePositionX - counter == (char) 97 || momentanePositionY + counter == 8){
-                weiter = false;
+            if(spiel.positionBesetzt(erlaubterZug.toString())){
+                if(spielzugType == "-"){
+                    break;
+                }else{
+                    erlaubteZuege.add(erlaubterZug);
+                    break;
+                }
             }
+            erlaubteZuege.add(erlaubterZug);
+            counter++;
         }
 
-        weiter = true;
-        while(weiter){
-            if(momentanePositionX == (char) 104 || momentanePositionY == 1){
-                weiter = false;
-                continue;
+        counter = 1;
+        while(true){
+            if(momentanePositionX + counter > (char) 104 || momentanePositionY - counter < 1){
+                break;
             }
-            erlaubterZug.append(momentanePositionX + counter);
+            StringBuffer erlaubterZug = new StringBuffer();
+            erlaubterZug.append((char) (momentanePositionX + counter));
             erlaubterZug.append(momentanePositionY - counter);
-            erlaubteZuege.add(erlaubterZug);
-            erlaubterZug.delete(0, erlaubterZug.length());
-            if(momentanePositionX + counter == (char) 104 || momentanePositionY - counter == 1){
-                weiter = false;
+            if(spiel.positionBesetzt(erlaubterZug.toString())){
+                if(spielzugType == "-"){
+                    break;
+                }else{
+                    erlaubteZuege.add(erlaubterZug);
+                    break;
+                }
             }
+            erlaubteZuege.add(erlaubterZug);
+            counter++;
         }
 
         for(StringBuffer zug : erlaubteZuege){
