@@ -180,7 +180,7 @@ public class MainController {
     private ImageView g8;
 
     @FXML
-    private ImageView h8 = new ImageView();
+    private ImageView h8;
 
     PauseTransition pause5 = new PauseTransition(
             Duration.seconds(5)
@@ -313,34 +313,43 @@ public class MainController {
                 }
             }
         }
+        lblGiveInformations.setOpacity(0.7);
+        lblGiveInformations.setStyle("-fx-background-color: darkred;");
         lblGiveInformations.setText(game.getAktuellerSpieler().getName() + " ist dran!");
         pause5.play();
         pause5.setOnFinished(event1 -> {
             lblGiveInformations.setText(null);
+            lblGiveInformations.setStyle(null);
         });
     }
 
     @FXML
     public void makeMove(ActionEvent event) throws InterruptedException {
-        if( game.zugAusfuehren(txtMove.getText()) == false){
+
+        if(game.zugAusfuehren(txtMove.getText()) == false ){
+            lblGiveInformations.setStyle("-fx-background-color: darkred;");
             lblGiveInformations.setText("Zug ungültig!");
             pause5.play();
             pause5.setOnFinished(event1 -> {
                 lblGiveInformations.setText(null);
+                lblGiveInformations.setStyle(null);
                 });
         } else {
             createField();
            if (game.spielGewonnen() == false) {
                game.spielerWechsel();
+               lblGiveInformations.setStyle("-fx-background-color: darkred;");
                lblGiveInformations.setText(game.getAktuellerSpieler().getName() + " ist dran!");
                pause5.play();
                pause5.setOnFinished(event1 -> {
                    lblGiveInformations.setText(null);
+                   lblGiveInformations.setStyle(null);
                });
            } else {
                btnGiveUp.setDisable(true);
                btnHelp.setDisable(true);
                btnMove.setDisable(true);
+               lblGiveInformations.setStyle("-fx-background-color: darkred;");
                lblGiveInformations.setText(game.getAktuellerSpieler().getName() + " hat gewonnen!");
                pause20.play();
                pause20.setOnFinished(event1 -> {
@@ -353,6 +362,7 @@ public class MainController {
                });
            }
         }
+
         txtMove.setText("");
     }
 
@@ -367,6 +377,7 @@ public class MainController {
              btnHelp.setDisable(true);
              btnMove.setDisable(true);
            if (game.getAktuellerSpieler().getName().equals(game.getSpieler1())){
+               lblGiveInformations.setStyle("-fx-background-color: darkred;");
                lblGiveInformations.setText(game.getSpieler1().getName() + " hat aufgegeben");
 
                pause5.play();
@@ -382,6 +393,7 @@ public class MainController {
                    });
                });
            } else {
+               lblGiveInformations.setStyle("-fx-background-color: darkred;");
                lblGiveInformations.setText(game.getSpieler2().getName() + " hat aufgegeben");
                pause5.play();
                pause5.setOnFinished(event1 -> {
@@ -402,7 +414,7 @@ public class MainController {
     @FXML
     public void openHelp (ActionEvent event) throws IOException {
 
-        FXMLLoader fxmlloader = new FXMLLoader (getClass().getResource("HelpFXML.fxml"));
+        FXMLLoader fxmlloader = new FXMLLoader (getClass().getResource("Help.fxml"));
         Parent root1 = (Parent) fxmlloader.load();
         Stage stage = new Stage();
 
