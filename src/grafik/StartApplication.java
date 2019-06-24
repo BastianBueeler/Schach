@@ -14,7 +14,7 @@ public class StartApplication extends Application {
 		stage.getIcons().add(new Image("Pictures/logo.png"));
 		stage.setTitle("Schachsoftware");
 
-		Parent root = FXMLLoader.load(getClass().getResource("Start.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("StartView.fxml"));
 
 		Scene scene = new Scene(root);
 

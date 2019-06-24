@@ -326,7 +326,7 @@ public class MainController {
     @FXML
     public void makeMove(ActionEvent event) throws InterruptedException {
 
-        if(game.zugAusfuehren(txtMove.getText()) == false ){
+        if(game.zugAusfuehren(txtMove.getText()) == false){
             lblGiveInformations.setStyle("-fx-background-color: darkred;");
             lblGiveInformations.setText("Zug ungültig!");
             pause5.play();
@@ -414,7 +414,7 @@ public class MainController {
     @FXML
     public void openHelp (ActionEvent event) throws IOException {
 
-        FXMLLoader fxmlloader = new FXMLLoader (getClass().getResource("Help.fxml"));
+        FXMLLoader fxmlloader = new FXMLLoader (getClass().getResource("HelpView.fxml"));
         Parent root1 = (Parent) fxmlloader.load();
         Stage stage = new Stage();
 

@@ -35,7 +35,7 @@ public class StartController {
 		stage = (Stage) GO.getScene().getWindow();
 
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/grafik/Main.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/grafik/MainView.fxml"));
 			loader.setController(MC);
 			root = loader.load();
 
