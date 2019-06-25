@@ -49,6 +49,9 @@ public class Spieler {
         this.spielfiguren = spielfiguren;
     }
 
+    /**
+     * @param figur - figur welche gefressen werden soll
+     */
     public void figurFressen(ISpielfigur figur){
         spielfiguren.remove(figur);
     }

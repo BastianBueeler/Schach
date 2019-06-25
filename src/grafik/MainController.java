@@ -294,22 +294,22 @@ public class MainController {
                     continue;
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("bauer")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/bauer.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/bauer.png"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("dame")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/dame.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/dame.png"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("könig")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/könig.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/koenig.png"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("läufer")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/läufer.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/laeufer.png"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("springer")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/springer.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/springer.png"));
                 }
                 if(spielfeld.get(i).get(j).getName().equalsIgnoreCase("turm")){
-                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/turm.jpg"));
+                    field.get(i).get(j).setImage(new Image ("Pictures/characters/" + spielfeld.get(i).get(j).getFarbe() + "/turm.png"));
                 }
             }
         }

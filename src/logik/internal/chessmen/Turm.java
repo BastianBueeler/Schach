@@ -23,7 +23,7 @@ public class Turm extends Spielfigur {
     /**
      * @param zielPosition - Position wo die Figur nach dem Zug soll sein
      * @param spielzugType - ob bei dem Zug eine Figur gefressen wird oder nicht
-     * @param spiel
+     * @param spiel - das Spiel, welches zentral liegt und alle figuren und Spieler kennt
      * @return boolean ob Zug erlaubt ist oder nicht
      */
     @Override
