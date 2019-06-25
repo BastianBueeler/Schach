@@ -52,7 +52,7 @@
                   <Insets right="75.0" top="305.0" />
                </GridPane.margin>
                <image>
-                  <Image url="@../Pictures/characters/white/bauer.jpg" />
+                  <Image url="@../Pictures/characters/white/koenig.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" rotate="3.0" GridPane.columnIndex="2" GridPane.halignment="LEFT">
@@ -60,7 +60,7 @@
                   <Insets left="75.0" top="305.0" />
                </GridPane.margin>
                <image>
-                  <Image url="@../Pictures/characters/black/bauer.jpg" />
+                  <Image url="@../Pictures/characters/black/koenig.png" />
                </image>
             </ImageView>
          </children>
