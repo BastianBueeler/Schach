@@ -19,6 +19,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Bastian Bueeler
+ * @version 1.0
+ */
+
 public class MainController {
 
     Spiel game;
@@ -284,6 +289,7 @@ public class MainController {
         field.add(row8);
     }
 
+
     public void createField() {
         List<List<ISpielfigur>> spielfeld = game.getSpielfeld();
         for(int i = 0; i < 8; i++){
@@ -323,8 +329,11 @@ public class MainController {
         });
     }
 
+    /**
+     * @param event Actionevent wird zur Ueberpruefung verwendet
+     */
     @FXML
-    public void makeMove(ActionEvent event) throws InterruptedException {
+    public void makeMove(ActionEvent event) {
 
         if (txtMove.getText().length() < 5) {
             txtMove.setText("aaaaa");
@@ -373,7 +382,9 @@ public class MainController {
         this.game = game;
     }
 
-
+    /**
+     * @param event Actionevent wird zur Ueberpruefung verwendet
+     */
         @FXML
         public void giveUp (ActionEvent event) {
              btnGiveUp.setDisable(true);
@@ -414,6 +425,10 @@ public class MainController {
            }
         }
 
+    /**
+     * @param event Actionevent wird zur Ueberpruefung verwendet
+     * @throws IOException
+     */
     @FXML
     public void openHelp (ActionEvent event) throws IOException {
 

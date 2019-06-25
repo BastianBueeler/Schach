@@ -11,6 +11,11 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import logik.Spiel;
 
+/**
+ * @author Bastian Bueeler
+ * @version 1.0
+ */
+
 public class StartController {
 
 	Spiel game = new Spiel();
@@ -24,7 +29,10 @@ public class StartController {
 	
 	@FXML
 	private TextField Player2;
-	
+
+	/**
+	 * @param event Actionevent wird zur Ueberpruefung verwendet
+	 */
 	@FXML
 	public void nextSite(ActionEvent event) {
 		MC.setGame(game);
@@ -50,7 +58,7 @@ public class StartController {
 		stage.setScene(scene);
 		stage.show();
 	}
-	
+
 	public void createGame(){
 		game.createSpieler(Player1.getText());
 		game.createSpieler(Player2.getText());

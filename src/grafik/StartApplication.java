@@ -7,8 +7,18 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+/**
+ * @author Bastian Bueeler
+ * @version 1.0
+ */
+
 public class StartApplication extends Application {
 
+	/**
+	 *
+	 * @param stage Neue Stage wird gemacht
+	 * @throws Exception
+	 */
 	@Override
 	public void start(Stage stage) throws Exception {
 		stage.getIcons().add(new Image("Pictures/logo.png"));
@@ -21,7 +31,11 @@ public class StartApplication extends Application {
 		stage.setScene(scene);
 		stage.show();
 	}
-	
+
+	/**
+	 *
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
