@@ -326,7 +326,10 @@ public class MainController {
     @FXML
     public void makeMove(ActionEvent event) throws InterruptedException {
 
-        if(game.zugAusfuehren(txtMove.getText()) == false){
+        if (txtMove.getText().length() < 5) {
+            txtMove.setText("aaaaa");
+        }
+        if( game.zugAusfuehren(txtMove.getText()) == false){
             lblGiveInformations.setStyle("-fx-background-color: darkred;");
             lblGiveInformations.setText("Zug ungültig!");
             pause5.play();
